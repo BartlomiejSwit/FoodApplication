@@ -44,7 +44,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FoodApplication.AP{I\FoodApplication.API.csproj">
+    <ProjectReference Include="..\FoodApplication.API\FoodApplication.API.csproj">
       <Project>{b13cd356-5198-4791-9132-80476da2c6d7}</Project>
       <Name>FoodApplication.API</Name>
     </ProjectReference>
