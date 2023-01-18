@@ -5,9 +5,9 @@ using System.Reflection;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
 using System.Xml.XPath;
-using FoodApplication.AP_I.Areas.HelpPage.ModelDescriptions;
+using FoodApplication.API.Areas.HelpPage.ModelDescriptions;
 
-namespace FoodApplication.AP_I.Areas.HelpPage
+namespace FoodApplication.API.Areas.HelpPage
 {
     /// <summary>
     /// A custom <see cref="IDocumentationProvider"/> that reads the API documentation from an XML documentation file.

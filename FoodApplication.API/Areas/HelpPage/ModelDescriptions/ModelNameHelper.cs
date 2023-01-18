@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
-namespace FoodApplication.AP_I.Areas.HelpPage.ModelDescriptions
+namespace FoodApplication.API.Areas.HelpPage.ModelDescriptions
 {
     internal static class ModelNameHelper
     {

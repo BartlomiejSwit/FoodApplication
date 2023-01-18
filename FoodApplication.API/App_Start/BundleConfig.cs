@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace FoodApplication.AP_I
+namespace FoodApplication.API
 {
     public class BundleConfig
     {

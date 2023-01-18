@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace FoodApplication.AP_I
+namespace FoodApplication.API
 {
     public static class WebApiConfig
     {

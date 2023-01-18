@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace FoodApplication.AP_I.Areas.HelpPage.ModelDescriptions
+namespace FoodApplication.API.Areas.HelpPage.ModelDescriptions
 {
     public interface IModelDocumentationProvider
     {

@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using FoodApplication.AP_I.Areas.HelpPage.ModelDescriptions;
-using FoodApplication.AP_I.Areas.HelpPage.Models;
+using FoodApplication.API.Areas.HelpPage.ModelDescriptions;
+using FoodApplication.API.Areas.HelpPage.Models;
 
-namespace FoodApplication.AP_I.Areas.HelpPage
+namespace FoodApplication.API.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

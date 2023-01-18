@@ -1,6 +1,6 @@
 using System;
 
-namespace FoodApplication.AP_I.Areas.HelpPage.ModelDescriptions
+namespace FoodApplication.API.Areas.HelpPage.ModelDescriptions
 {
     public class ParameterAnnotation
     {

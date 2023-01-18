@@ -3,7 +3,7 @@ using System.Text;
 using System.Web;
 using System.Web.Http.Description;
 
-namespace FoodApplication.AP_I.Areas.HelpPage
+namespace FoodApplication.API.Areas.HelpPage
 {
     public static class ApiDescriptionExtensions
     {

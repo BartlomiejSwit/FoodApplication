@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using FoodApplication.AP_I.Areas.HelpPage.ModelDescriptions;
-using FoodApplication.AP_I.Areas.HelpPage.Models;
+using FoodApplication.API.Areas.HelpPage.ModelDescriptions;
+using FoodApplication.API.Areas.HelpPage.Models;
 
-namespace FoodApplication.AP_I.Areas.HelpPage.Controllers
+namespace FoodApplication.API.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

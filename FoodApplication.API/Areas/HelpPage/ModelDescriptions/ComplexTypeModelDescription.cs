@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 
-namespace FoodApplication.AP_I.Areas.HelpPage.ModelDescriptions
+namespace FoodApplication.API.Areas.HelpPage.ModelDescriptions
 {
     public class ComplexTypeModelDescription : ModelDescription
     {

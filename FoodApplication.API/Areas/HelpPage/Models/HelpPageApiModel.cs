@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http.Headers;
 using System.Web.Http.Description;
-using FoodApplication.AP_I.Areas.HelpPage.ModelDescriptions;
+using FoodApplication.API.Areas.HelpPage.ModelDescriptions;
 
-namespace FoodApplication.AP_I.Areas.HelpPage.Models
+namespace FoodApplication.API.Areas.HelpPage.Models
 {
     /// <summary>
     /// The model that represents an API displayed on the help page.

@@ -1,4 +1,4 @@
-namespace FoodApplication.AP_I.Areas.HelpPage
+namespace FoodApplication.API.Areas.HelpPage
 {
     /// <summary>
     /// Indicates whether the sample is used for request or response
