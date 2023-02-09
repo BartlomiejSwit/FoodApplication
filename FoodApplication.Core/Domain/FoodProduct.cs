@@ -11,7 +11,7 @@ namespace FoodApplication.Core.Domain
         public int id { get; set; }
         public string name { get; set; }
         public int quantity { get; set; }  
-        public MesaureUnit mesaureUnit { get; set; }
+        public MeasureUnit measureUnit { get; set; }
 
 
   

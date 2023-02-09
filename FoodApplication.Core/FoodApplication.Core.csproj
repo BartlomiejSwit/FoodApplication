@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\FoodProduct.cs" />
-    <Compile Include="Domain\MesaureUnit.cs" />
+    <Compile Include="Domain\MeasureUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

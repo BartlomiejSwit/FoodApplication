@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FoodApplication.Core.Domain
 {
-    public enum MesaureUnit
+    public enum MeasureUnit
     {
         szt, 
         kg, 

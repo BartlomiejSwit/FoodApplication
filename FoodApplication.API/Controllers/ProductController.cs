@@ -9,6 +9,10 @@ namespace FoodApplication.API.Controllers
 {
     public class ProductController : ApiController
     {
+        public string Post([FromBody] string value)
+        {
+            return value;
+        }
 
     }
 }
