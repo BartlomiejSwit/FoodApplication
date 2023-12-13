@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6CFEEE11-D331-4E54-8850-C6E77362E34B}</ProjectGuid>
+    <ProjectGuid>{39A01315-AE9B-4080-8AB3-96742C75134E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FoodApplication.Core</RootNamespace>
-    <AssemblyName>FoodApplication.Core</AssemblyName>
+    <RootNamespace>Scripts</RootNamespace>
+    <AssemblyName>Scripts</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,28 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\FoodProduct.cs" />
-    <Compile Include="Domain\MeasureUnit.cs" />
-    <Compile Include="Domain\Models\Product\FoodProduct.cs" />
-    <Compile Include="Domain\Models\Product\FoodProductBase.cs" />
-    <Compile Include="Domain\Models\Product\FoodProductList.cs" />
-    <Compile Include="Domain\Models\Product\MeasurUnit.cs" />
-    <Compile Include="Domain\Models\Product\ProductType.cs" />
-    <Compile Include="Domain\Models\Users\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\FoodApplication.API\FoodApplication.API.csproj">
-      <Project>{b13cd356-5198-4791-9132-80476da2c6d7}</Project>
-      <Name>FoodApplication.API</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FoodApplication.Infrastructure\FoodApplication.Infrastructure.csproj">
-      <Project>{c53055db-4b79-4fc3-826e-da0b697e7c1d}</Project>
-      <Name>FoodApplication.Infrastructure</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
+    <Content Include="Create\CreateDatabase.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
