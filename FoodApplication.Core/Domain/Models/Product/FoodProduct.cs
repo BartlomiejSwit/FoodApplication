@@ -11,9 +11,5 @@ namespace FoodApplication.Core.Domain.Models.Product
         public virtual int Id { get; set; }
         public virtual int FoodProductBaseId { get; set; }
         public virtual int Quantity { get; set;}
-        public virtual List<FoodProductList> FoodProductList { get; set; }
-        public virtual int FoodProductId { get; set; }
-
-
     }
 }
