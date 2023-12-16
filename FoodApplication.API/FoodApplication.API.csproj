@@ -156,6 +156,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MeasureUnitController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProductListController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -218,6 +219,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\MeasureUnit\" />
     <Folder Include="Views\ProductList\" />
     <Folder Include="Views\Product\" />
   </ItemGroup>
@@ -249,6 +251,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FoodApplication.Core\FoodApplication.Core.csproj">
+      <Project>{6CFEEE11-D331-4E54-8850-C6E77362E34B}</Project>
+      <Name>FoodApplication.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodApplication.DataAccess\FoodApplication.DataAccess.csproj">
+      <Project>{8e451277-46a5-4056-8445-b938a78d03c7}</Project>
+      <Name>FoodApplication.DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

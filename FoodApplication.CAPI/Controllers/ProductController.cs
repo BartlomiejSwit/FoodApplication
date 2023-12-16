@@ -1,4 +1,5 @@
 ﻿using FoodApplication.Core.Domain;
+using FoodApplication.Core.Domain.Models.Product;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,9 @@ namespace FoodApplication.API.Controllers
     public class ProductController : ControllerBase
     {
         [HttpPost]
-        public string Post([FromBody] FoodProduct value)
+        public string Post([FromBody] FoodProductBase value)
         {
-            if (value.name == null)
+            if (value.Name == null)
             {
                 return "NO-OK";
             }

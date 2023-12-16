@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FoodApplication.Core.Domain.Models.Product
 {
-    internal class FoodProductBase
+    public class FoodProductBase
     {
         public virtual int Id { get; set; }
         public virtual string Name { get; set; }

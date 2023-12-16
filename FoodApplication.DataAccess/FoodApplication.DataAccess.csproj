@@ -4,14 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6CFEEE11-D331-4E54-8850-C6E77362E34B}</ProjectGuid>
+    <ProjectGuid>{8E451277-46A5-4056-8445-B938A78D03C7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FoodApplication.Core</RootNamespace>
-    <AssemblyName>FoodApplication.Core</AssemblyName>
+    <RootNamespace>FoodApplication.DataAccess</RootNamespace>
+    <AssemblyName>FoodApplication.DataAccess</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,19 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\Models\Product\FoodProduct.cs" />
-    <Compile Include="Domain\Models\Product\FoodProductBase.cs" />
-    <Compile Include="Domain\Models\Product\FoodProductList.cs" />
-    <Compile Include="Domain\Models\Product\MeasurUnit.cs" />
-    <Compile Include="Domain\Models\Product\ProductType.cs" />
-    <Compile Include="Domain\Models\Users\Users.cs" />
+    <Compile Include="FoodProductDao.cs" />
+    <Compile Include="MeasurUnitDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repositories\" />
+    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FoodApplication.Core\FoodApplication.Core.csproj">
+      <Project>{6cfeee11-d331-4e54-8850-c6e77362e34b}</Project>
+      <Name>FoodApplication.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodApplication.Infrastructure\FoodApplication.Infrastructure.csproj">
+      <Project>{C53055DB-4B79-4FC3-826E-DA0B697E7C1D}</Project>
+      <Name>FoodApplication.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

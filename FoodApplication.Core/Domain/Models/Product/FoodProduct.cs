@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace FoodApplication.Core.Domain.Models.Product
 {
-    internal class FoodProduct
+    public class FoodProduct
     {
         public virtual int Id { get; set; }
         public virtual int FoodProductBaseId { get; set; }
         public virtual int Quantity { get; set;}
+
     }
 }

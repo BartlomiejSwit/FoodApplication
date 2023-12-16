@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace FoodApplication.Core.Domain.Models.Product
 {
-    public enum MeasurUnit
+    public class MeasurUnit
     {
-        kg =1,
-        szt = 2,
-
-
-        
-
+        public virtual int Id { get; set; }
+        public virtual string Name { get; set; }
+        //szt,
+        //kg,
+        //g,
+        //dk,
+        //l,
+        //ml
     }
 }

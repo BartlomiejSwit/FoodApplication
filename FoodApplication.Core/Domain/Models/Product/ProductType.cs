@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace FoodApplication.Core.Domain.Models.Product
 {
-    public enum ProductType
+    public class ProductType
     {
-
-        Product,
+        public virtual int Id { get; set; }
+        public virtual string Name { get; set; }        
 
     }
 }

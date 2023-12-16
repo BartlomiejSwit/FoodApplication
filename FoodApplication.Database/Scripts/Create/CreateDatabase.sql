@@ -48,7 +48,7 @@ BEGIN
     CREATE TABLE MeasurUnit
     (
         Id INT IDENTITY (1,1) PRIMARY KEY,
-        MeasureName NVARCHAR(100)
+        Name NVARCHAR(100)
     );
 END
 
@@ -58,7 +58,7 @@ BEGIN
     CREATE TABLE ProductType
     (
         Id INT IDENTITY (1,1) PRIMARY KEY,
-        ProductTypeName NVARCHAR(100)
+        Name NVARCHAR(100)
     );
 END
 
