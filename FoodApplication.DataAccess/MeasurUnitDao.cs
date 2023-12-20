@@ -25,7 +25,7 @@ namespace FoodApplication.DataAccess
             using (SqlConnection connection = new SqlConnection(ConnectionString()))
             {
                 connection.Open();
-                string query = "SELECT Id, Name, Quantity FROM dbo.MeasurUnit ORDER BY Data";
+                string query = "SELECT Id, Name FROM dbo.MeasurUnit";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -47,6 +47,38 @@ namespace FoodApplication.DataAccess
 
             return measurUnits;
         }
+        public List<MeasurUnit> GetMeasurUnitById(int Id)
+        {
+            List<MeasurUnit> measurUnits = new List<MeasurUnit>();
+            using (SqlConnection connection = new SqlConnection(ConnectionString()))
+            {
+                connection.Open();
+                string query = "SELECT Id, Name FROM dbo.MeasurUnit WHERE Id = @Id";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Id", Id);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            MeasurUnit measurUnit = new MeasurUnit
+                            {
+                                Id = Convert.ToInt32(reader["Id"]),
+                                Name = Convert.ToString(reader["Name"])
+                            };
+
+                            measurUnits.Add(measurUnit);
+                        }
+                    }
+                }
+            }
+
+            return measurUnits;
+
+        }
+
 
         public void AddMeasurUnit(MeasurUnit measurUnit)
         {
