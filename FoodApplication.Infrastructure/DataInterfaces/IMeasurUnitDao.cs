@@ -10,6 +10,7 @@ namespace FoodApplication.Infrastructure.DataInterfaces
     public interface IMeasurUnitDao
     {
         List<MeasurUnit> GetData();
+        List<MeasurUnit> GetMeasurUnitById(int Id);
         void AddMeasurUnit(MeasurUnit measurUnits);
         void UpdateMeasurUnit(MeasurUnit measurUnits);
         void DeleteMeasurUnit(int id);

@@ -159,6 +159,7 @@
     <Compile Include="Controllers\MeasureUnitController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProductListController.cs" />
+    <Compile Include="Controllers\ProductTypeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -221,6 +222,7 @@
     <Folder Include="Models\" />
     <Folder Include="Views\MeasureUnit\" />
     <Folder Include="Views\ProductList\" />
+    <Folder Include="Views\ProductType\" />
     <Folder Include="Views\Product\" />
   </ItemGroup>
   <ItemGroup>

@@ -66,6 +66,8 @@
   <ItemGroup>
     <Compile Include="DataInterfaces\IFoodProductDao.cs" />
     <Compile Include="DataInterfaces\IMeasurUnitDao.cs" />
+    <Compile Include="DataInterfaces\IProductTypeDao.cs" />
+    <Compile Include="DataInterfaces\IUsersDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

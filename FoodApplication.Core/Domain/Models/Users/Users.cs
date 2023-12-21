@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FoodApplication.Core.Domain.Models.Users
 {
-    internal class Users
+    public class Users
     {
         public virtual Guid id { get; set; }
         public virtual string FirstName { get; set; }
