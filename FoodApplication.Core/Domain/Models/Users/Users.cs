@@ -8,7 +8,7 @@ namespace FoodApplication.Core.Domain.Models.Users
 {
     public class Users
     {
-        public virtual Guid id { get; set; }
+        public virtual Guid Id { get; set; }
         public virtual string FirstName { get; set; }
         public virtual string LastName { get; set; }
         public virtual string Email { get; set; }

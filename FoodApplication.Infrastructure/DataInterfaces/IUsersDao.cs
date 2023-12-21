@@ -10,11 +10,11 @@ namespace FoodApplication.Infrastructure.DataInterfaces
 {
     public interface IUsersDao
     {
-        //List<Users> GetData();
-        //List<Users> GetMeasurUnitById(int Id);
-        //void AddMeasurUnit(Users users);
-        //void UpdateMeasurUnit(Users users);
-        //void DeleteMeasurUnit(int id);
+        List<Users> GetData();
+        List<Users> GetUsersById(int Id);
+        void AddUsers(Users users);
+        void UpdateUsers(Users users);
+        void DeleteUsers(int id);
 
     }
 }
