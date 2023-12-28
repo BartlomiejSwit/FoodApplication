@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FoodProductBaseDao.cs" />
     <Compile Include="FoodProductDao.cs" />
+    <Compile Include="FoodProductListDao.cs" />
     <Compile Include="MeasurUnitDao.cs" />
     <Compile Include="ProductTypeDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

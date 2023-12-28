@@ -67,7 +67,7 @@ namespace FoodApplication.API.Controllers
                 return ex.Message;
             }
         }
-        public string Delete(int value)
+        public string Delete(string value)
         {
             try
             {

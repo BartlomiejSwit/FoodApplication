@@ -17,8 +17,7 @@ namespace FoodApplication.API.Controllers
             {
                 var all = new List<ProductType>();
                 var muDao = new ProductTypeDao();
-                int intId;
-                if (int.TryParse(id, out intId))
+                if (int.TryParse(id, out int intId))
                 {
 
                     if (intId == 0)
@@ -44,7 +43,6 @@ namespace FoodApplication.API.Controllers
             }
         }
 
-        // POST api/ProductList
         public string Post([FromBody] ProductType value)
         {
             try

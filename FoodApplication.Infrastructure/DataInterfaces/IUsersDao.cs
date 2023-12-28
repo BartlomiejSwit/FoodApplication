@@ -14,7 +14,7 @@ namespace FoodApplication.Infrastructure.DataInterfaces
         List<Users> GetUsersById(int Id);
         void AddUsers(Users users);
         void UpdateUsers(Users users);
-        void DeleteUsers(int id);
+        void DeleteUsers(string id);
 
     }
 }

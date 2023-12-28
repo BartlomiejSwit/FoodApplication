@@ -1,69 +1,62 @@
 ﻿using FoodApplication.Core.Domain.Models.Product;
+using FoodApplication.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
-using FoodApplication.DataAccess;
-using Newtonsoft.Json.Linq;
 
 namespace FoodApplication.API.Controllers
 {
-    public class MeasureUnitController : ApiController
+    public class FoodProductListController : ApiController
     {
-        public List<MeasurUnit> Get(string id)
+        public List<FoodProductList> Get(string id)
         {
             try
             {
-                var all = new List<MeasurUnit>();
-                var muDao = new MeasurUnitDao();
+                var all = new List<FoodProductList>();
+                var muDao = new FoodProductListDao();
                 if (int.TryParse(id, out int intId))
                 {
-
                     if (intId == 0)
                     {
                         all = muDao.GetData();
-                        return all;
                     }
                     else
                     {
-
-                        all = muDao.GetMeasurUnitById(intId);
-                        return all;
+                        all = muDao.GetFoodProductListById(intId);
                     }
-
                 }
-                return all;
 
+                return all;
+            }
+            catch (Exception ex)
+            {
+                return new List<FoodProductList>();
+            }
+        }
+
+        public string Post([FromBody] FoodProductList value)
+        {
+            try
+            {
+                var muDao = new FoodProductListDao();
+                muDao.AddFoodProductList(value);
+                return "Ok";
 
             }
             catch (Exception ex)
             {
-                return new List<MeasurUnit>();
+                return ex.Message;
             }
         }
-
-        public string Post([FromBody] MeasurUnit value)
+        public string Put([FromBody] FoodProductList value)
         {
             try
             {
-                var muDao = new MeasurUnitDao();
-                muDao.AddMeasurUnit(value);
-                return "Ok";
-
-            }catch (Exception ex)
-            {
-                return ex.Message;            
-            }
-        }
-
-        public string Put([FromBody] MeasurUnit value)
-        {
-            try
-            {
-                var muDao = new MeasurUnitDao();
-                muDao.UpdateMeasurUnit(value);
+                var muDao = new FoodProductListDao();
+                muDao.UpdateFoodProductList(value);
                 return "Ok";
 
             }
@@ -76,8 +69,8 @@ namespace FoodApplication.API.Controllers
         {
             try
             {
-                var muDao = new MeasurUnitDao();
-                muDao.DeleteMeasurUnit(value);
+                var muDao = new FoodProductListDao();
+                muDao.DeleteFoodProductList(value);
                 return "Ok";
 
             }
@@ -86,6 +79,5 @@ namespace FoodApplication.API.Controllers
                 return ex.Message;
             }
         }
-
     }
 }

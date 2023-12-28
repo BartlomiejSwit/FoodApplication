@@ -64,7 +64,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataInterfaces\IFoodProductBaseDao.cs" />
     <Compile Include="DataInterfaces\IFoodProductDao.cs" />
+    <Compile Include="DataInterfaces\IFoodProductListDao.cs" />
     <Compile Include="DataInterfaces\IMeasurUnitDao.cs" />
     <Compile Include="DataInterfaces\IProductTypeDao.cs" />
     <Compile Include="DataInterfaces\IUsersDao.cs" />

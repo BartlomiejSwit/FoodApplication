@@ -132,7 +132,7 @@ namespace FoodApplication.DataAccess
             }
         }
 
-        public void DeleteUsers(int id)
+        public void DeleteUsers(string id)
         {
             using (SqlConnection connection = new SqlConnection(ConnectionString()))
             {

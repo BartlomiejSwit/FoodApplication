@@ -155,6 +155,8 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\FoodProductBaseController.cs" />
+    <Compile Include="Controllers\FoodProductListController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MeasureUnitController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -221,6 +223,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\FoodProductBase\" />
+    <Folder Include="Views\FoodProductList\" />
     <Folder Include="Views\MeasureUnit\" />
     <Folder Include="Views\ProductList\" />
     <Folder Include="Views\ProductType\" />
