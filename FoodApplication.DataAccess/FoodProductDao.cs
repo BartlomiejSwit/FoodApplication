@@ -54,10 +54,41 @@ namespace FoodApplication.DataAccess
             using (SqlConnection connection = new SqlConnection(ConnectionString()))
             {
                 connection.Open();
-                string query = "SELECT Id, FoodProductBaseId, Quantity FROM dbo.FoodProduct ORDER BY Data";
+                string query = "SELECT Id, FoodProductBaseId, Quantity FROM dbo.FoodProduct";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            FoodProduct foodProduct = new FoodProduct
+                            {
+                                Id = Convert.ToInt32(reader["Id"]),
+                                FoodProductBaseId = Convert.ToInt32(reader["FoodProductBaseId"]),
+                                Quantity = Convert.ToInt32(reader["Quantity"])
+                            };
+
+                            foodProducts.Add(foodProduct);
+                        }
+                    }
+                }
+            }
+
+            return foodProducts;
+        }
+        public List<FoodProduct> GetFoodProductById(int Id)
+        {
+            List<FoodProduct> foodProducts = new List<FoodProduct>();
+
+            using (SqlConnection connection = new SqlConnection(ConnectionString()))
+            {
+                connection.Open();
+                string query = "SELECT Id, FoodProductBaseId, Quantity FROM dbo.FoodProduct";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Id", Id);
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())

@@ -85,12 +85,12 @@ namespace FoodApplication.DataAccess
             using (SqlConnection connection = new SqlConnection(ConnectionString()))
             {
                 connection.Open();
-                string query = "INSERT INTO dbo.Users (Name, ProductType, MeasureUnit) " +
+                string query = "INSERT INTO dbo.FoodProductBase (Name, ProductType, MeasureUnit) " +
                "VALUES (@Name, @ProductType, @MeasureUnit)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@FirstName", foodProductBase.Name);
+                    command.Parameters.AddWithValue("@Name", foodProductBase.Name);
                     command.Parameters.AddWithValue("@ProductType", foodProductBase.ProductType);
                     command.Parameters.AddWithValue("@MeasureUnit", foodProductBase.MeasureUnit);
 
@@ -103,7 +103,7 @@ namespace FoodApplication.DataAccess
             using (SqlConnection connection = new SqlConnection(ConnectionString()))
             {
                 connection.Open();
-                string query = "UPDATE dbo.Users " +
+                string query = "UPDATE dbo.FoodProductBase " +
                "SET Name = @Name, ProductType = @ProductType, " +
                "MeasureUnit = @MeasureUnit" +
                "WHERE Id = @Id";

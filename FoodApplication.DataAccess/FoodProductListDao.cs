@@ -34,7 +34,7 @@ namespace FoodApplication.DataAccess
                             FoodProductList foodProductList = new FoodProductList
                             {
                                 Id = Convert.ToInt32(reader["Id"]),
-                                FoodProductId = Convert.ToInt32(reader["IdFoodProductId"]),
+                                FoodProductId = Convert.ToInt32(reader["FoodProductId"]),
                                 UserId = (Guid)reader["UserId"]
 
                             };
@@ -83,7 +83,7 @@ namespace FoodApplication.DataAccess
             using (SqlConnection connection = new SqlConnection(ConnectionString()))
             {
                 connection.Open();
-                string query = "INSERT INTO dbo.Users (FoodProductId, UserId) " +
+                string query = "INSERT INTO dbo.FoodProductList (FoodProductId, UserId) " +
                "VALUES (@FoodProductId, @UserId)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -101,7 +101,7 @@ namespace FoodApplication.DataAccess
             using (SqlConnection connection = new SqlConnection(ConnectionString()))
             {
                 connection.Open();
-                string query = "UPDATE dbo.Users " +
+                string query = "UPDATE dbo.FoodProductList " +
                "SET FoodProductId = @FoodProductId, UserId = @UserId, " +
                "WHERE Id = @Id";
 

@@ -13,6 +13,7 @@ namespace FoodApplication.Infrastructure.DataInterfaces
     public interface IFoodProductDao
     {
         List<FoodProduct> GetData();
+        List<FoodProduct> GetFoodProductById(int Id);
         void AddFoodProduct(FoodProduct foodProduct);
         void UpdateFoodProduct(FoodProduct foodProduct);
         void DeleteFoodProduct(int id);
