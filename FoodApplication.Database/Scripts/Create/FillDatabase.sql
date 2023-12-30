@@ -12,11 +12,22 @@ VALUES ('John', 'Doe', 'john.doe@example.com', 'Uzytkownik1', 'Haslo1'),
 	   ('Olivia', 'Moore', 'olivia.moore@example.com', 'Uzytkownik10', 'Haslo110');
 
 -- Pobieranie Id użytkowników z tabeli Users
-DECLARE @UserId1 UNIQUEIDENTIFIER, @UserId2 UNIQUEIDENTIFIER, @UserId3 UNIQUEIDENTIFIER;
+DECLARE 
+  @UserId1 UNIQUEIDENTIFIER, @UserId2 UNIQUEIDENTIFIER, @UserId3 UNIQUEIDENTIFIER,
+  @UserId4 UNIQUEIDENTIFIER, @UserId5 UNIQUEIDENTIFIER, @UserId6 UNIQUEIDENTIFIER,
+  @UserId7 UNIQUEIDENTIFIER, @UserId8 UNIQUEIDENTIFIER, @UserId9 UNIQUEIDENTIFIER,
+  @UserId10 UNIQUEIDENTIFIER;
 
 SELECT @UserId1 = Id FROM Users WHERE UserName = 'Uzytkownik1';
 SELECT @UserId2 = Id FROM Users WHERE UserName = 'Uzytkownik2';
 SELECT @UserId3 = Id FROM Users WHERE UserName = 'Uzytkownik3';
+SELECT @UserId4 = Id FROM Users WHERE UserName = 'Uzytkownik4';
+SELECT @UserId5 = Id FROM Users WHERE UserName = 'Uzytkownik5';
+SELECT @UserId6 = Id FROM Users WHERE UserName = 'Uzytkownik6';
+SELECT @UserId7 = Id FROM Users WHERE UserName = 'Uzytkownik7';
+SELECT @UserId8 = Id FROM Users WHERE UserName = 'Uzytkownik8';
+SELECT @UserId9 = Id FROM Users WHERE UserName = 'Uzytkownik9';
+SELECT @UserId10 = Id FROM Users WHERE UserName = 'Uzytkownik10';
 
 -- Wstawianie danych do tabeli MeasurUnit
 INSERT INTO MeasurUnit (Name)
@@ -26,6 +37,9 @@ VALUES ('mg'),
        ('l'),
 	   ('cl'),
        ('ml'),
+       ('szkl'),
+       ('łyżeczka'),
+       ('łyżka'),
        ('szt');
 
 -- Wstawianie danych do tabeli ProductType

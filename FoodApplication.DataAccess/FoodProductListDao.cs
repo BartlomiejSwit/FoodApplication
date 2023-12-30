@@ -102,7 +102,7 @@ namespace FoodApplication.DataAccess
             {
                 connection.Open();
                 string query = "UPDATE dbo.FoodProductList " +
-               "SET FoodProductId = @FoodProductId, UserId = @UserId, " +
+               "SET FoodProductId = @FoodProductId, UserId = @UserId " +
                "WHERE Id = @Id";
 
                 using (SqlCommand command = new SqlCommand(query, connection))

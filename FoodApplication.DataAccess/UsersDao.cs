@@ -91,12 +91,11 @@ namespace FoodApplication.DataAccess
             using (SqlConnection connection = new SqlConnection(ConnectionString()))
             {
                 connection.Open();
-                string query = "INSERT INTO dbo.Users (Id, FirstName, LastName, Email, UserName, UserPassword) " +
-               "VALUES (@Id, @FirstName, @LastName, @Email, @UserName, @UserPassword)";
+                string query = "INSERT INTO dbo.Users (FirstName, LastName, Email, UserName, UserPassword) " +
+               "VALUES (@FirstName, @LastName, @Email, @UserName, @UserPassword)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@Id", users.Id = Guid.NewGuid());
                     command.Parameters.AddWithValue("@FirstName", users.FirstName);
                     command.Parameters.AddWithValue("@LastName", users.LastName);
                     command.Parameters.AddWithValue("@Email", users.Email);
