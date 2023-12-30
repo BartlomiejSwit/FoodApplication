@@ -63,5 +63,7 @@
   <ItemGroup>
     <None Include="Scripts\Create\CreateDatabase.sql" />
     <None Include="Scripts\Drop\Drop.sql" />
+    <None Include="Scripts\Create\FillDatabase.sql" />
+    <None Include="Scripts\Drop\ClearDatabase.sql" />
   </ItemGroup>
 </Project>

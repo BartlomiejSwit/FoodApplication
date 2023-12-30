@@ -20,6 +20,7 @@
 --END
 --GO
 
+-- Tworzenie bazy danych, jeśli nie istnieje
 IF NOT EXISTS (SELECT name FROM master.sys.databases WHERE name = 'FoodApplicationDB')
 BEGIN
     CREATE DATABASE FoodApplicationDB;
@@ -28,17 +29,17 @@ GO
 
 USE FoodApplicationDB;
 
---Tabela Users
+-- Tabela Users
 IF NOT EXISTS (SELECT 1 FROM information_schema.tables WHERE [table_name] = 'Users')
 BEGIN
     CREATE TABLE Users
     (
         Id UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
-        FirstName NVARCHAR(100),
-        LastName NVARCHAR(100),
-        Email NVARCHAR(100),
-        UserName NVARCHAR(100),
-        UserPassword NVARCHAR(100)
+        FirstName NVARCHAR(100) NOT NULL,
+        LastName NVARCHAR(100) NOT NULL,
+        Email NVARCHAR(100) NOT NULL,
+        UserName NVARCHAR(100) NOT NULL,
+        UserPassword NVARCHAR(100) NOT NULL
     );
 END
 
@@ -48,7 +49,7 @@ BEGIN
     CREATE TABLE MeasurUnit
     (
         Id INT IDENTITY (1,1) PRIMARY KEY,
-        Name NVARCHAR(100)
+        Name NVARCHAR(100) NOT NULL
     );
 END
 
@@ -58,7 +59,7 @@ BEGIN
     CREATE TABLE ProductType
     (
         Id INT IDENTITY (1,1) PRIMARY KEY,
-        Name NVARCHAR(100)
+        Name NVARCHAR(100) NOT NULL
     );
 END
 
@@ -68,9 +69,9 @@ BEGIN
     CREATE TABLE FoodProductBase
     (
         Id INT IDENTITY (1,1) PRIMARY KEY,
-        Name NVARCHAR(100),
-        ProductType INT,
-        MeasureUnit INT,
+        Name NVARCHAR(100) NOT NULL,
+        ProductType INT NOT NULL,
+        MeasureUnit INT NOT NULL,
         FOREIGN KEY (ProductType) REFERENCES ProductType(Id),
         FOREIGN KEY (MeasureUnit) REFERENCES MeasurUnit(Id)
     );
@@ -82,9 +83,9 @@ BEGIN
     CREATE TABLE FoodProduct
     (
         Id INT IDENTITY (1,1) PRIMARY KEY,
-        FoodProductBaseId INT,
-        Quantity INT,
-        FOREIGN KEY (FoodProductBaseId) REFERENCES FoodProductBase(Id),
+        FoodProductBaseId INT NOT NULL,
+        Quantity INT NOT NULL,
+        FOREIGN KEY (FoodProductBaseId) REFERENCES FoodProductBase(Id)
     );
 END
 
@@ -94,8 +95,8 @@ BEGIN
     CREATE TABLE FoodProductList
     (
         Id INT IDENTITY (1,1) PRIMARY KEY,
-        FoodProductId INT,
-        UserId UNIQUEIDENTIFIER,
+        FoodProductId INT NOT NULL,
+        UserId UNIQUEIDENTIFIER NOT NULL,
         FOREIGN KEY (FoodProductId) REFERENCES FoodProduct(Id),
         FOREIGN KEY (UserId) REFERENCES Users(Id)
     );
